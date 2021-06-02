@@ -34,7 +34,8 @@ Requirements
 Limitations
 ***********
 
-This configuration doesn't enable Wi-Fi because the combination of the BLE client, display and Wi-Fi components uses too much memory, resulting in a boot loop. Ssee issues `#1336 <https://github.com/esphome/issues/issues/1336>`_, `#1731 <https://github.com/esphome/issues/issues/1731>`_ and `#2045 <https://github.com/esphome/issues/issues/2045>`_.
+* This configuration doesn't enable Wi-Fi because the combination of the BLE client, display and Wi-Fi components uses too much memory, resulting in a boot loop. See issues `#1336 <https://github.com/esphome/issues/issues/1336>`_, `#1731 <https://github.com/esphome/issues/issues/1731>`_ and `#2045 <https://github.com/esphome/issues/issues/2045>`_.
+* On older M5Stack Core models, the colors are inverted. See issue `#1893 <https://github.com/esphome/issues/issues/1893>`_. One solution is to copy the ``ili9341`` directory from your ESPHome installation's components directory and put it in a directory ``custom_components`` next to your YAML file. Then change the line ``this->invert_display_(true);`` in the file ``custom_components/ili9341/ili9341_display.cpp`` to ``this->invert_display_(false);``. When compiling the firmware again, ESPHome uses your custom component instead of the default one.
 
 *****
 Usage
