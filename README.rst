@@ -12,10 +12,15 @@ ESPHome Heart Rate Display
 
 This `ESPHome <https://esphome.io/>`_ configuration builds firmware that shows the heart rate sent by a Bluetooth Low Energy heart rate sensor on the display of an M5Stack Core or LilyGO TTGO T-Display ESP32.
 
-This looks like this:
+This looks like this on an M5Stack Core:
 
 .. image:: https://github.com/koenvervloesem/ESPHome-Heart-Rate-Display/raw/main/m5stack.jpg
    :alt: An M5Stack Core as a heart rate display
+
+And like this on a LilyGO TTGO T-Display ESP32:
+
+.. image:: https://github.com/koenvervloesem/ESPHome-Heart-Rate-Display/raw/main/tdisplay.jpg
+   :alt: A LilyGO TTGO T-Display ESP32 as a heart rate display
 
 ************
 Requirements
