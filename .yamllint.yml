@@ -5,3 +5,4 @@ ignore: |
   build/
 rules:
   document-start: disable
+  line-length: disable
