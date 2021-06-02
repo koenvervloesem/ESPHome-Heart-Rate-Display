@@ -1,0 +1,37 @@
+esp32_ble_tracker:
+
+ble_client:
+  - mac_address: "${ble_mac}"
+    id: heart_rate_monitor
+
+sensor:
+  - platform: ble_client
+    ble_client_id: heart_rate_monitor
+    id: heart_rate_measurement
+    name: "${node_name} Heart rate measurement"
+    service_uuid: '180d'
+    characteristic_uuid: '2a37'
+    notify: true
+    lambda: |-
+      uint16_t heart_rate_measurement = x[1];
+      if (x[0] & 1) {
+          heart_rate_measurement += (x[2] << 8);
+      }
+      return (float)heart_rate_measurement;
+    icon: 'mdi:heart'
+    unit_of_measurement: 'bpm'
+    update_interval: 1s
+  - platform: ble_client
+    ble_client_id: heart_rate_monitor
+    id: device_name
+    service_uuid: '1800'
+    characteristic_uuid: '2a00'
+    lambda: |-
+      std::string data_string(x.begin(), x.end());
+      id(heart_rate_sensor_name).publish_state(data_string.c_str());
+      return (float)x.size();
+
+text_sensor:
+  - platform: template
+    name: "${node_name} heart rate sensor name"
+    id: heart_rate_sensor_name

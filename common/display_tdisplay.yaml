@@ -1,0 +1,37 @@
+color:
+  - id: color_blue
+    red: 0%
+    green: 0%
+    blue: 100%
+  - id: color_red
+    red: 100%
+    green: 0%
+    blue: 0%
+  - id: color_white
+    red: 100%
+    green: 100%
+    blue: 100%
+  - id: color_black
+    red: 0%
+    green: 0%
+    blue: 0%
+
+# Display configuration for the LilyGO TTGO T-Display ESP32
+spi:
+  clk_pin: GPIO18
+  mosi_pin: GPIO19
+
+display:
+  - platform: st7789v
+    backlight_pin: GPIO4
+    cs_pin: GPIO5
+    dc_pin: GPIO16
+    reset_pin: GPIO23
+    rotation: 270
+    update_interval: 1s
+    lambda: |-
+      it.fill(id(color_black));
+      it.rectangle(0,  0, it.get_width(), it.get_height(), id(color_blue));
+      it.rectangle(0, 32, it.get_width(), it.get_height(), id(color_blue));
+      it.printf(it.get_width() / 2, 16, id(font_roboto), id(color_white), TextAlign::CENTER, "%s", id(heart_rate_sensor_name).state.c_str());
+      it.printf(it.get_width() / 2, it.get_height() / 2 + 16, id(font_roboto_big), id(color_red), TextAlign::CENTER, "%.0f bpm", id(heart_rate_measurement).state);
