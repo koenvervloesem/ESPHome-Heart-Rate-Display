@@ -1,19 +1,7 @@
 ---
 name: Build
 
-on:
-  pull_request:
-    paths:
-      - '.github/workflows/**'
-      - 'common/**'
-      - '*_example.yaml'
-      - 'requirements.txt'
-  push:
-    paths:
-      - '.github/workflows/**'
-      - 'common/**'
-      - '*_example.yaml'
-      - 'requirements.txt'
+on: [push, pull_request]
 
 jobs:
   test:
