@@ -1,10 +1,13 @@
+# Base configuration for the ESPHome Heart Rate Display
+#
+# Copyright (c) 2021 Koen Vervloesem
+# SPDX-License-Identifier: MIT
+#
 esphome:
   name: ${node_name}
   platform: ${node_platform}
   board: ${node_board}
   build_path: ./build/${node_name}
-  includes:
-    - include/display.h
 
 # Enable logging
 logger:
@@ -14,8 +17,6 @@ font:
   - file: "fonts/Roboto-Medium.ttf"
     id: font_roboto
     size: 22
-    glyphs: '!"%()+,-_.:°0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz/³µ'
   - file: "fonts/Roboto-Medium.ttf"
     id: font_roboto_big
     size: 44
-    glyphs: '!"%()+,-_.:°0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz/³µ'

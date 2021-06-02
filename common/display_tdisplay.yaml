@@ -1,3 +1,8 @@
+# LilyGO TTGO T-Display ESP32 Core display configuration for the ESPHome Heart Rate Display
+#
+# Copyright (c) 2021 Koen Vervloesem
+# SPDX-License-Identifier: MIT
+#
 color:
   - id: color_blue
     red: 0%
@@ -16,7 +21,6 @@ color:
     green: 0%
     blue: 0%
 
-# Display configuration for the LilyGO TTGO T-Display ESP32
 spi:
   clk_pin: GPIO18
   mosi_pin: GPIO19

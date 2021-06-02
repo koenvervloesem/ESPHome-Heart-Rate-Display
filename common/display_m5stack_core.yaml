@@ -1,4 +1,8 @@
-# Display configuration for the M5Stack Core
+# M5Stack Core display configuration for the ESPHome Heart Rate Display
+#
+# Copyright (c) 2021 Koen Vervloesem
+# SPDX-License-Identifier: MIT
+#
 
 # The older M5Stack Core devices have inverted colors
 color:

@@ -1,3 +1,8 @@
+# BLE configuration for the ESPHome Heart Rate Display
+#
+# Copyright (c) 2021 Koen Vervloesem
+# SPDX-License-Identifier: MIT
+#
 esp32_ble_tracker:
 
 ble_client:
@@ -9,8 +14,8 @@ sensor:
     ble_client_id: heart_rate_monitor
     id: heart_rate_measurement
     name: "${node_name} Heart rate measurement"
-    service_uuid: '180d'
-    characteristic_uuid: '2a37'
+    service_uuid: '180d'  # Heart Rate Service
+    characteristic_uuid: '2a37'  # Heart Rate Measurement
     notify: true
     lambda: |-
       uint16_t heart_rate_measurement = x[1];
@@ -24,8 +29,8 @@ sensor:
   - platform: ble_client
     ble_client_id: heart_rate_monitor
     id: device_name
-    service_uuid: '1800'
-    characteristic_uuid: '2a00'
+    service_uuid: '1800'  # Generic Access Profile
+    characteristic_uuid: '2a00'  # Device Name
     lambda: |-
       std::string data_string(x.begin(), x.end());
       id(heart_rate_sensor_name).publish_state(data_string.c_str());
