@@ -27,7 +27,7 @@ Requirements
 ************
 
 - M5Stack Core or LilyGO TTGO T-Display ESP32
-- ESPHome development version (you can install this with ``pip3 install https://github.com/esphome/esphome/archive/dev.zip``)
+- ESPHome 1.19.0 or later
 - A heart rate sensor that implements the Heart Rate Measurement characteristic of Bluetooth Low Energy.
 
 ***********
@@ -60,7 +60,7 @@ If you successfully created a configuration for another ESP32 board or another s
 How does this work?
 *******************
 
-`ESPHome 1.18 <https://esphome.io/changelog/v1.18.0.html>`_ added support for an `ESP32 BLE Client <https://esphome.io/components/ble_client.html>`_ and a `BLE Sensor <https://esphome.io/components/sensor/ble_sensor.html>`_, which allows you to connect to Bluetooth Low Energy devices and read characteristics. This initial implementation is limited to one-byte characteristics which it interprets as ``float`` values, but thanks to `pull request #1851 (Add optional lambda to BLESensor for raw data parsing) <https://github.com/esphome/esphome/pull/1851>`_, you can also read the raw bytes.
+`ESPHome 1.18 <https://esphome.io/changelog/v1.18.0.html>`_ added support for an `ESP32 BLE Client <https://esphome.io/components/ble_client.html>`_ and a `BLE Sensor <https://esphome.io/components/sensor/ble_sensor.html>`_, which allows you to connect to Bluetooth Low Energy devices and read characteristics. This initial implementation was limited to one-byte characteristics which it interprets as ``float`` values. But thanks to `pull request #1851 (Add optional lambda to BLESensor for raw data parsing) <https://github.com/esphome/esphome/pull/1851>`_, you can also read the raw bytes, and this is available since `ESPHome 1.19 <https://esphome.io/changelog/v1.19.0.html>`_.
 
 This ESPHome configuration makes use of these raw bytes in two ways (in `common/heart_rate.yaml <https://github.com/koenvervloesem/ESPHome-Heart-Rate-Display/blob/main/common/heart_rate.yaml>`_):
 
