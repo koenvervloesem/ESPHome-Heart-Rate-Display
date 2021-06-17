@@ -52,7 +52,7 @@ After this, flash the firmware to your device, e.g. with:
 
 .. code-block:: console
 
-  esphome m5stack_example.yaml run --upload-port /dev/ttyUSB0
+  esphome run m5stack_example.yaml --device /dev/ttyUSB0
 
 If you successfully created a configuration for another ESP32 board or another standalone display, please contribute an example configuration with a `pull request <https://github.com/koenvervloesem/ESPHome-Heart-Rate-Display/pulls>`_.
 
