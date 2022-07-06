@@ -38,3 +38,9 @@ font:
   - file: "fonts/Roboto-Medium.ttf"
     id: font_roboto_big
     size: 44
+  - file: "fonts/Roboto-Medium.ttf"
+    id: font_roboto_10
+    size: 10
+  - file: "fonts/Roboto-Medium.ttf"
+    id: font_roboto_20
+    size: 20

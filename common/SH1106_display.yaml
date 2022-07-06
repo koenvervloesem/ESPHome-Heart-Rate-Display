@@ -1,0 +1,17 @@
+# Configuration for an 1,3'' OLED SH1106 display
+
+i2c:
+  - id: bus_a
+    sda: 21
+    scl: 22
+    scan: false
+
+display:
+  - platform: ssd1306_i2c
+    model: "SH1106 128x64"
+    #reset_pin: 0
+    address: 0x3C
+    lambda: |-
+      it.rectangle(0,  0, it.get_width(), it.get_height());
+      it.printf(it.get_width() / 2, 10, id(font_roboto_10), TextAlign::CENTER, "%s", id(heart_rate_sensor_name).state.c_str());
+      it.printf(it.get_width() /2, 35, id(font_roboto_20), TextAlign::CENTER, "%.1f bpm", id(heart_rate_measurement).state);

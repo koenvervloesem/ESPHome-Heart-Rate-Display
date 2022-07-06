@@ -1,0 +1,10 @@
+substitutions:
+  node_name: heart-rate-display
+  node_platform: ESP32
+  node_board: esp-wrover-kit
+  ble_mac: AA:BB:CC:DD:EE:FF
+
+packages:
+  base: !include common/base.yaml
+  heart_rate: !include common/heart_rate.yaml
+  display: !include common/display_tdisplay.yaml
