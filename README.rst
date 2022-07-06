@@ -21,11 +21,11 @@ And like this on a LilyGO TTGO T-Display ESP32:
 
 .. image:: https://github.com/koenvervloesem/ESPHome-Heart-Rate-Display/raw/main/tdisplay.jpg
    :alt: A LilyGO TTGO T-Display ESP32 as a heart rate display
-   
-And like  this on a SH1106 1,3 inches OLED Display
+
+And like this on a SH1106 1.3 inch OLED display:
 
 .. image:: https://github.com/koenvervloesem/ESPHome-Heart-Rate-Display/raw/main/sh1106.jpg
-   :alt: A 1,3 inches OLED display as heart rate display
+   :alt: A 1.3 inch OLED display as a heart rate display
 
 ************
 Requirements
