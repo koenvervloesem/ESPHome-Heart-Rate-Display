@@ -21,12 +21,17 @@ And like this on a LilyGO TTGO T-Display ESP32:
 
 .. image:: https://github.com/koenvervloesem/ESPHome-Heart-Rate-Display/raw/main/tdisplay.jpg
    :alt: A LilyGO TTGO T-Display ESP32 as a heart rate display
+   
+And like  this on a SH1106 1,3 inches OLED Display
+
+.. image:: https://github.com/koenvervloesem/ESPHome-Heart-Rate-Display/raw/main/sh1106.jpg
+   :alt: A 1,3 inches OLED display as heart rate display
 
 ************
 Requirements
 ************
 
-- M5Stack Core or LilyGO TTGO T-Display ESP32
+- M5Stack Core, LilyGO TTGO T-Display ESP32 or a 1,3 inches SH1106 OLED display and an ESP32
 - ESPHome 1.19.0 or later
 - A heart rate sensor that implements the Heart Rate Measurement characteristic of Bluetooth Low Energy.
 
