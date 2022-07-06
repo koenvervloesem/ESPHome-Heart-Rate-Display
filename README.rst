@@ -46,12 +46,13 @@ Limitations
 Usage
 *****
 
-There are two example configurations in this repository:
+There are three example configurations in this repository:
 
 - `m5stack_example.yaml <https://github.com/koenvervloesem/ESPHome-Heart-Rate-Display/blob/main/m5stack_example.yaml>`_ for the M5Stack Core
 - `tdisplay_example.yaml <https://github.com/koenvervloesem/ESPHome-Heart-Rate-Display/blob/main/tdisplay_example.yaml>`_ for the TTGO T-Display ESP32
+- `SH1106_example.yaml <https://github.com/koenvervloesem/ESPHome-Heart-Rate-Display/blob/main/SH1106_example.yaml>`_ for the OLED Display and an ESP32
 
-Change the ``ble_mac`` substitution to the BLE MAC address of your heart rate sensor.
+Change the ``ble_mac`` substitution to the BLE MAC address of your heart rate sensor and in case you are using the SH1106 OLED Display adapt the ``node_board`` to your choice.
 
 After this, flash the firmware to your device, e.g. with:
 
