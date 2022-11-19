@@ -11,6 +11,7 @@ ble_client:
 
 sensor:
   - platform: ble_client
+    type: characteristic
     ble_client_id: heart_rate_monitor
     id: heart_rate_measurement
     name: "${node_name} Heart rate measurement"
@@ -27,6 +28,7 @@ sensor:
     unit_of_measurement: 'bpm'
     update_interval: 1s
   - platform: ble_client
+    type: characteristic
     ble_client_id: heart_rate_monitor
     id: device_name
     service_uuid: '1800'  # Generic Access Profile
